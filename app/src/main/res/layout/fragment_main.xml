@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fragMain"
     tools:context=".MainFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,19 +30,25 @@
                 android:ems="10"
                 android:hint="  검색하기" />
 
-            <TextView
+            <LinearLayout
                 android:id="@+id/btn_fragment_search"
                 android:layout_width="80dp"
                 android:layout_height="45dp"
-                android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:background="@drawable/shape"
-                android:backgroundTint="@color/white"
-                android:text="검색"
-                android:gravity="center"
-                android:textColor="#A4C8FF"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape"
+                    android:backgroundTint="@color/white"
+                    android:text="검색"
+                    android:gravity="center"
+                    android:textColor="#A4C8FF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
 
         </LinearLayout>
@@ -52,7 +59,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
